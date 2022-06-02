@@ -1,0 +1,857 @@
+﻿@using Task.Models;
+@{
+    ViewData["Title"] = "Juan";
+}
+@model List<Slider>;
+
+<main>
+    <!-- section Main-carousel starts -->
+    <section id="main-carousel" class="main-carousel">
+        <div class="container main-carousel__container">
+            <div class="row main-carousel__container__row">
+                <div class="col-lg-12 main-carousel__container__row__column">
+                    <div id="carouselExampleIndicators"
+                         class="carousel slide slide carousel-fade main-carousel__container__row__column__carousel "
+                         data-bs-ride="carousel">
+                        <div class="carousel-indicators _unvisible-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active _unvisible-indicators__button" aria-current="true"
+                                    aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    class="_unvisible-indicators__button" aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner main-carousel__container__row__column__carousel__items">
+                                <div class="carousel-item active carousel-inner main-carousel__container__row__column__carousel__items__item"
+                                     data-bs-interval="3200">
+                                    <img src="~/assets/images/@ViewBag.Sliders[0].image"
+                                         class="d-block w-100 main-carousel__container__row__column__carousel__items__item__img"
+                                         alt="shoes">
+                                    <div class="carousel-caption main-carousel__container__row__column__carousel__items__item__caption">
+                                        <h5 class="main-carousel__container__row__column__carousel__items__item__caption__top-title">
+                                            @ViewBag.Sliders[0].title
+                                        </h5>
+                                        <h2 class="main-carousel__container__row__column__carousel__items__item__caption__title">
+                                            @ViewBag.Sliders[0].sub_title
+                                        </h2>
+                                        <p class="main-carousel__container__row__column__carousel__items__item__caption__article">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incidid
+                                        </p>
+                                        <a class="main-carousel__container__row__column__carousel__items__item__caption__link"
+                                           href=@ViewBag.Sliders[0].link>
+                                            SHOP NOW
+                                        </a>
+                                    </div>
+                                </div>
+
+                            <div class="carousel-item main-carousel__container__row__column__carousel__items__item"
+                                 data-bs-interval="3200">
+                                <img src="~/assets/images/@ViewBag.Sliders[1].image"
+                                     class="d-block w-100 main-carousel__container__row__column__carousel__items__item__img"
+                                     alt="shoes">
+                                <div class="carousel-caption main-carousel__container__row__column__carousel__items__item__caption">
+                                    <h5 class="main-carousel__container__row__column__carousel__items__item__caption__top-title">
+                                        @ViewBag.Sliders[1].title
+                                    </h5>
+                                    <h2 class="main-carousel__container__row__column__carousel__items__item__caption__title">
+                                        @ViewBag.Sliders[1].sub_title
+                                    </h2>
+                                    <p class="main-carousel__container__row__column__carousel__items__item__caption__article">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incidid
+                                    </p>
+                                    <a class="main-carousel__container__row__column__carousel__items__item__caption__link"
+                                       href=@ViewBag.Sliders[1].link>
+                                        SHOP NOW
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev main-carousel__container__row__column__carousel__prev"
+                                type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon main-carousel__container__row__column__carousel__prev__icon _cus-carousel__icon "
+                                  aria-hidden="true">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next main-carousel__container__row__column__carousel__next"
+                                type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon main-carousel__container__row__column__carousel__next__icon _cus-carousel__icon"
+                                  aria-hidden="true">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container main-carousel__stickers-container">
+            <div class="row main-carousel__stickers-container__row-bottom">
+                <div class="col-lg-4 main-carousel__stickers-container__row-bottom__column">
+                    <div class="main-carousel__stickers-container__row-bottom__column__sticker">
+                        <div class="main-carousel__stickers-container__row-bottom__column__sticker__icon">
+                            <img src="~/assets/images/policy-1.webp" alt="policy"
+                                 class="main-carousel__stickers-container__row-bottom__column__sticker__icon__img">
+                        </div>
+                        <div class="main-carousel__stickers-container__row-bottom__column__sticker__text">
+                            <h5>
+                                FREE SHIPPING
+                            </h5>
+                            <p>
+                                Free shipping on all order
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 main-carousel__stickers-container__row-bottom__column">
+                    <div class="main-carousel__stickers-container__row-bottom__column__sticker">
+                        <div class="main-carousel__stickers-container__row-bottom__column__sticker__icon">
+                            <img src="~/assets/images/policy-2.webp" alt="policy"
+                                 class="main-carousel__stickers-container__row-bottom__column__sticker__icon__img">
+                        </div>
+                        <div class="main-carousel__stickers-container__row-bottom__column__sticker__text">
+                            <h5>
+                                ONLINE SUPPORT
+                            </h5>
+                            <p>
+                                Online support 24 hours a day
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 main-carousel__stickers-container__row-bottom__column">
+                    <div class="main-carousel__stickers-container__row-bottom__column__sticker">
+                        <div class="main-carousel__stickers-container__row-bottom__column__sticker__icon">
+                            <img src="~/assets/images/policy-3.webp" alt="policy"
+                                 class="main-carousel__stickers-container__row-bottom__column__sticker__icon__img">
+                        </div>
+                        <div class="main-carousel__stickers-container__row-bottom__column__sticker__text">
+                            <h5>
+                                MONEY RETURN
+                            </h5>
+                            <p>
+                                Back guarantee under 5 days
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section Main-page-products starts -->
+    <section id="main-products" class="main-products">
+        <div class="container main-products__container">
+            <div class="row main-products__container__row">
+                <div class="main-products__container__row__title">
+                    <h2>
+                        Our Product
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                    </p>
+                </div>
+                <div class=" owl-carousel owl-theme main-products__container__row__carousel">
+                    <div class="item">
+                        <div class="product-prototype ">
+                            <a href="single-product.html" class="product-prototype__image">
+                                <img src="~/assets/images/products/product-1.webp" alt="product"
+                                     class="product-prototype__image__img _img-pro">
+                            </a>
+                            <div class="product-prototype__info">
+                                <h5 class="product-prototype__info__name">
+                                    <a href="single-product.html" class="product-prototype__info__name__link _name-pro">
+                                        Leather Mens shoes
+                                    </a>
+
+                                </h5>
+                                <span class="product-prototype__info__actual-price _price-pro">
+                                    $<span>80.00</span>
+                                </span>
+                                <del class="product-prototype__info__old-price">
+                                    $70.00$
+                                </del>
+                            </div>
+                            <div class="product-prototype__buttons">
+                                <button type="button" class="product-prototype__buttons__btn-wishlist "
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button" class="product-prototype__buttons__btn-chart _btn-pro" id="pro1"
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Add To Chart">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </button>
+                                <button type="button" class="product-prototype__buttons__btn-view _quick-btn "
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Quick View">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product-prototype ">
+                            <a href="single-product.html" class="product-prototype__image">
+                                <img src="~/assets/images/products/product-2.webp" alt="product"
+                                     class="product-prototype__image__img _img-pro">
+                            </a>
+                            <div class="product-prototype__info">
+                                <h5 class="product-prototype__info__name">
+                                    <a href="single-product.html" class="product-prototype__info__name__link _name-pro">
+                                        Quickiin Mens shoes
+                                    </a>
+                                </h5>
+                                <span class="product-prototype__info__actual-price _price-pro">
+                                    $<span>80.00</span>
+                                </span>
+                                <del class="product-prototype__info__old-price">
+                                    $70.00$
+                                </del>
+                            </div>
+                            <div class="product-prototype__buttons">
+                                <button type="button" class="product-prototype__buttons__btn-wishlist "
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button" class="product-prototype__buttons__btn-chart _btn-pro" id="pro2"
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Add To Chart">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </button>
+                                <button type="button" class="product-prototype__buttons__btn-view _quick-btn "
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Quick View">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product-prototype ">
+                            <a href="single-product.html" class="product-prototype__image">
+                                <img src="~/assets/images/products/product-3.webp" alt="product"
+                                     class="product-prototype__image__img _img-pro">
+                            </a>
+                            <div class="product-prototype__info">
+                                <h5 class="product-prototype__info__name">
+                                    <a href="single-product.html" class="product-prototype__info__name__link _name-pro">
+                                        Rexpo Womens shoes
+                                    </a>
+                                </h5>
+                                <span class="product-prototype__info__actual-price _price-pro">
+                                    $<span>80.00</span>
+                                </span>
+                                <del class="product-prototype__info__old-price">
+                                    $70.00$
+                                </del>
+                            </div>
+                            <div class="product-prototype__buttons">
+                                <button type="button" class="product-prototype__buttons__btn-wishlist "
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button" class="product-prototype__buttons__btn-chart _btn-pro" id="pro3"
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Add To Chart">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </button>
+                                <button type="button" class="product-prototype__buttons__btn-view _quick-btn "
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Quick View">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product-prototype ">
+                            <a href="single-product.html" class="product-prototype__image">
+                                <img src="~/assets/images/products/product-4.webp" alt="product"
+                                     class="product-prototype__image__img _img-pro">
+                            </a>
+                            <div class="product-prototype__info">
+                                <h5 class="product-prototype__info__name">
+                                    <a href="single-product.html" class="product-prototype__info__name__link _name-pro">
+                                        Primitive Mens shoes
+                                    </a>
+                                </h5>
+                                <span class="product-prototype__info__actual-price _price-pro">
+                                    $<span>80.00</span>
+                                </span>
+                                <del class="product-prototype__info__old-price">
+                                    $70.00
+                                </del>
+                            </div>
+                            <div class="product-prototype__buttons">
+                                <button type="button" class="product-prototype__buttons__btn-wishlist "
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button" class="product-prototype__buttons__btn-chart _btn-pro" id="pro4"
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Add To Chart">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </button>
+                                <button type="button" class="product-prototype__buttons__btn-view _quick-btn "
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Quick View">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="product-prototype ">
+                            <a href="single-product.html" class="product-prototype__image">
+                                <img src="~/assets/images/products/product-5.webp" alt="product"
+                                     class="product-prototype__image__img _img-pro">
+                            </a>
+                            <div class="product-prototype__info">
+                                <h5 class="product-prototype__info__name">
+                                    <a href="single-product.html" class="product-prototype__info__name__link _name-pro">
+                                        Leather Mens Slipper
+                                    </a>
+
+                                </h5>
+                                <span class="product-prototype__info__actual-price _price-pro">
+                                    $<span>80.00</span>
+                                </span>
+                                <del class="product-prototype__info__old-price">
+                                    $70.00
+                                </del>
+                            </div>
+                            <div class="product-prototype__buttons">
+                                <button type="button" class="product-prototype__buttons__btn-wishlist "
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button type="button" class="product-prototype__buttons__btn-chart _btn-pro" id="pro5"
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Add To Chart">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </button>
+                                <button type="button" class="product-prototype__buttons__btn-view _quick-btn "
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip" title="Quick View">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section Main-discount starts -->
+    <section id="main-discount" class="main-discount">
+        <div class="container main-discount__container">
+            <div class="row main-discount__container__row">
+                <div class="col-md-6 main-discount__container__row__column">
+                    <div class="main-discount__container__row__column__image">
+                        <img src="~/assets/images/background/banner-1.webp" alt="discount"
+                             class="main-discount__container__row__column__image__img">
+                        <div class="main-discount__container__row__column__image__info">
+                            <h5 class="main-discount__container__row__column__image__info__text">
+                                SPORTS SHOES
+                            </h5>
+                            <h3 class="main-discount__container__row__column__image__info__discount">
+                                20% OFF
+                                <br>
+                                FOR SPORTS MEN
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 main-discount__container__row__column">
+                    <div class="main-discount__container__row__column__image">
+                        <img src="~/assets/images/background/banner-2.webp" alt="discount"
+                             class="main-discount__container__row__column__image__img">
+                        <div class="main-discount__container__row__column__image__info">
+                            <h5 class="main-discount__container__row__column__image__info__text">
+                                SPORTS SHOES
+                            </h5>
+                            <h3 class="main-discount__container__row__column__image__info__discount">
+                                20% OFF
+                                <br>
+                                FOR SPORTS MEN
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section Main-top-seller starts -->
+    <section id="main-top-seller" class="main-top-seller">
+        <div class="container main-top-seller__container">
+            <div class="row section-title-row">
+                <div class="section-title-row__title">
+                    <h2>
+                        Top Seller
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                    </p>
+                </div>
+            </div>
+            <div class="row main-top-seller__container__row">
+                <div class="col-lg-4 main-top-seller__container__row__image">
+                    <img src="~/assets/images/banner-3.webp" alt="top-seller"
+                         class="main-top-seller__container__row__image__img">
+                </div>
+                <div class="col-lg-8 main-top-seller__container__row__top-sellers">
+                    <div class="owl-carousel owl-theme main-top-seller__container__row__top-sellers__carousel">
+                        <div class="item">
+                            <div class="main-top-seller__container__row__top-sellers__carousel__top-seller">
+                                <div class="product-prototype-reverse ">
+                                    <div class="product-prototype-reverse__image">
+                                        <img src="~/assets/images/top-seller/pro-small-1.webp" alt="top-seller"
+                                             class="product-prototype-reverse__image__img _img-pro">
+                                    </div>
+                                    <div class="product-prototype-reverse__description">
+                                        <div class="product-prototype-reverse__description__info">
+                                            <h5 class="product-prototype-reverse__description__info__name">
+                                                <a href="#"
+                                                   class="product-prototype-reverse__description__info__name__link _name-pro">
+                                                    Quickiin Mens shoes
+                                                </a>
+                                            </h5>
+                                            <span class="product-prototype-reverse__description__info__actual-price _price-pro">
+                                                $<span>80.00</span>
+                                            </span>
+                                            <del class="product-prototype-reverse__description__info__old-price">
+                                                $70.00$
+                                            </del>
+                                            <p class="product-prototype-reverse__description__info__stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </p>
+                                        </div>
+                                        <div class="product-prototype-reverse__description__buttons">
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-wishlist "
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Wishlist">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-chart _btn-pro" id="pro6"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Add To Chart">
+                                                <i class="fa-solid fa-bag-shopping"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-view _quick-btn "
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Quick View">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-prototype-reverse ">
+                                    <div class="product-prototype-reverse__image">
+                                        <img src="~/assets/images/top-seller/pro-small-2.webp" alt="top-seller"
+                                             class="product-prototype-reverse__image__img _img-pro">
+                                    </div>
+                                    <div class="product-prototype-reverse__description">
+                                        <div class="product-prototype-reverse__description__info">
+                                            <h5 class="product-prototype-reverse__description__info__name">
+                                                <a href="#"
+                                                   class="product-prototype-reverse__description__info__name__link _name-pro">
+                                                    Quickiin Mens shoes
+                                                </a>
+                                            </h5>
+                                            <span class="product-prototype-reverse__description__info__actual-price _price-pro">
+                                                $<span>80.00</span>
+                                            </span>
+                                            <del class="product-prototype-reverse__description__info__old-price">
+                                                $70.00$
+                                            </del>
+                                            <p class="product-prototype-reverse__description__info__stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </p>
+                                        </div>
+                                        <div class="product-prototype-reverse__description__buttons">
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-wishlist "
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Wishlist">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-chart _btn-pro" id="pro7"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Add To Chart">
+                                                <i class="fa-solid fa-bag-shopping"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-view _quick-btn "
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Quick View">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="main-top-seller__container__row__top-sellers__carousel__top-seller">
+                                <div class="product-prototype-reverse ">
+                                    <div class="product-prototype-reverse__image">
+                                        <img src="~/assets/images/top-seller/pro-small-3.webp" alt="top-seller"
+                                             class="product-prototype-reverse__image__img _img-pro">
+                                    </div>
+                                    <div class="product-prototype-reverse__description">
+                                        <div class="product-prototype-reverse__description__info">
+                                            <h5 class="product-prototype-reverse__description__info__name">
+                                                <a href="#"
+                                                   class="product-prototype-reverse__description__info__name__link _name-pro">
+                                                    Quickiin Mens shoes
+                                                </a>
+                                            </h5>
+                                            <span class="product-prototype-reverse__description__info__actual-price _price-pro">
+                                                $<span>80.00</span>
+                                            </span>
+                                            <del class="product-prototype-reverse__description__info__old-price">
+                                                $70.00$
+                                            </del>
+                                            <p class="product-prototype-reverse__description__info__stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </p>
+                                        </div>
+                                        <div class="product-prototype-reverse__description__buttons">
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-wishlist "
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Wishlist">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-chart _btn-pro" id="pro8"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Add To Chart">
+                                                <i class="fa-solid fa-bag-shopping"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-view _quick-btn "
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Quick View">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-prototype-reverse ">
+                                    <div class="product-prototype-reverse__image">
+                                        <img src="~/assets/images/top-seller/pro-small-4.webp" alt="top-seller"
+                                             class="product-prototype-reverse__image__img _img-pro">
+                                    </div>
+                                    <div class="product-prototype-reverse__description">
+                                        <div class="product-prototype-reverse__description__info">
+                                            <h5 class="product-prototype-reverse__description__info__name">
+                                                <a href="#"
+                                                   class="product-prototype-reverse__description__info__name__link _name-pro">
+                                                    Quickiin Mens shoes
+                                                </a>
+                                            </h5>
+                                            <span class="product-prototype-reverse__description__info__actual-price _price-pro">
+                                                $<span>80.00</span>
+                                            </span>
+                                            <del class="product-prototype-reverse__description__info__old-price">
+                                                $70.00$
+                                            </del>
+                                            <p class="product-prototype-reverse__description__info__stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </p>
+                                        </div>
+                                        <div class="product-prototype-reverse__description__buttons">
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-wishlist "
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Wishlist">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-chart _btn-pro" id="pro9"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Add To Chart">
+                                                <i class="fa-solid fa-bag-shopping"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-view _quick-btn "
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Quick View">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="main-top-seller__container__row__top-sellers__carousel__top-seller">
+                                <div class="product-prototype-reverse ">
+                                    <div class="product-prototype-reverse__image">
+                                        <img src="~/assets/images/top-seller/pro-small-2.webp" alt="top-seller"
+                                             class="product-prototype-reverse__image__img _img-pro">
+                                    </div>
+                                    <div class="product-prototype-reverse__description">
+                                        <div class="product-prototype-reverse__description__info">
+                                            <h5 class="product-prototype-reverse__description__info__name">
+                                                <a href="#"
+                                                   class="product-prototype-reverse__description__info__name__link _name-pro">
+                                                    Quickiin Mens shoes
+                                                </a>
+                                            </h5>
+                                            <span class="product-prototype-reverse__description__info__actual-price _price-pro">
+                                                $80.00
+                                            </span>
+                                            <del class="product-prototype-reverse__description__info__old-price">
+                                                $70.00$
+                                            </del>
+                                            <p class="product-prototype-reverse__description__info__stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </p>
+                                        </div>
+                                        <div class="product-prototype-reverse__description__buttons">
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-wishlist "
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Wishlist">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-chart _btn-pro" id="pro10"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Add To Chart">
+                                                <i class="fa-solid fa-bag-shopping"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-view _quick-btn "
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Quick View">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-prototype-reverse ">
+                                    <div class="product-prototype-reverse__image">
+                                        <img src="~/assets/images/top-seller/pro-small-3.webp" alt="top-seller"
+                                             class="product-prototype-reverse__image__img _img-pro">
+                                    </div>
+                                    <div class="product-prototype-reverse__description">
+                                        <div class="product-prototype-reverse__description__info">
+                                            <h5 class="product-prototype-reverse__description__info__name">
+                                                <a href="#"
+                                                   class="product-prototype-reverse__description__info__name__link _name-pro">
+                                                    Quickiin Mens shoes
+                                                </a>
+                                            </h5>
+                                            <span class="product-prototype-reverse__description__info__actual-price _price-pro">
+                                                $<span>80.00</span>
+                                            </span>
+                                            <del class="product-prototype-reverse__description__info__old-price">
+                                                $70.00$
+                                            </del>
+                                            <p class="product-prototype-reverse__description__info__stars">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </p>
+                                        </div>
+                                        <div class="product-prototype-reverse__description__buttons">
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-wishlist "
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Wishlist">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-chart _btn-pro" id="pro11"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Add To Chart">
+                                                <i class="fa-solid fa-bag-shopping"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="product-prototype-reverse__description__buttons__btn-view _quick-btn "
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    data-bs-custom-class="custom-tooltip" title="Quick View">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section Main-blogs starts -->
+    <section id="main-blogs" class="main-blogs">
+        <div class="container main-blogs__container">
+            <div class="row section-title-row">
+                <div class="section-title-row__title">
+                    <h2>
+                        Our Blog
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                    </p>
+                </div>
+            </div>
+            <div class="row main-blogs__container__row">
+
+                <div class="owl-carousel owl-theme main-blogs__container__row__carousel">
+                    <div class="item">
+                        <div class=" blog-prototype">
+                            <div class="blog-prototype__image">
+                                <img class="blog-prototype__image__img" src="~/assets/images/blogs/blog-1.webp"
+                                     alt="blog">
+                            </div>
+                            <div class="blog-prototype__info">
+                                <a class="blog-prototype__info__title" href="single-blog.html">
+                                    Children Left Home Alone For 4 Days In TV Series Experiment
+                                </a>
+                                <p class="blog-prototype__info__date">
+                                    <strong>By:</strong>Admin, <strong>On:</strong> 14.07.2029
+                                </p>
+                                <a class="blog-prototype__info__read-more" href="single-blog.html">
+                                    Read more...
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class=" blog-prototype">
+                            <div class="blog-prototype__image">
+                                <img class="blog-prototype__image__img" src="~/assets/images/blogs/blog-2.webp"
+                                     alt="blog">
+                            </div>
+                            <div class="blog-prototype__info">
+                                <a class="blog-prototype__info__title" href="single-blog.html">
+                                    Children Left Home Alone For 4 Days In TV Series Experiment
+                                </a>
+                                <p class="blog-prototype__info__date">
+                                    <strong>By:</strong>Admin, <strong>On:</strong> 14.07.2029
+                                </p>
+                                <a class="blog-prototype__info__read-more" href="single-blog.html">
+                                    Read more...
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class=" blog-prototype">
+                            <div class="blog-prototype__image">
+                                <img class="blog-prototype__image__img" src="~/assets/images/blogs/blog-3.webp"
+                                     alt="blog">
+                            </div>
+                            <div class="blog-prototype__info">
+                                <a class="blog-prototype__info__title" href="single-blog.html">
+                                    Children Left Home Alone For 4 Days In TV Series Experiment
+                                </a>
+                                <p class="blog-prototype__info__date">
+                                    <strong>By:</strong>Admin, <strong>On:</strong> 14.07.2029
+                                </p>
+                                <a class="blog-prototype__info__read-more" href="single-blog.html">
+                                    Read more...
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class=" blog-prototype">
+                            <div class="blog-prototype__image">
+                                <img class="blog-prototype__image__img" src="~/assets/images/blogs/blog-2.webp"
+                                     alt="blog">
+                            </div>
+                            <div class="blog-prototype__info">
+                                <a class="blog-prototype__info__title" href="single-blog.html">
+                                    Children Left Home Alone For 4 Days In TV Series Experiment
+                                </a>
+                                <p class="blog-prototype__info__date">
+                                    <strong>By:</strong>Admin, <strong>On:</strong> 14.07.2029
+                                </p>
+                                <a class="blog-prototype__info__read-more" href="single-blog.html">
+                                    Read more...
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row main-blogs__container__logo-row">
+                <div class="owl-carousel owl-theme main-blogs__container__logo-row__carousel">
+                    <div class="item">
+                        <div class="_logo">
+                            <img src="~/assets/images/blogs/brand-logo/br1.webp" alt="logo" class="_logo__img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="_logo">
+                            <img src="~/assets/images/blogs/brand-logo/br2.webp" alt="logo" class="_logo__img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="_logo">
+                            <img src="~/assets/images/blogs/brand-logo/br3.webp" alt="logo" class="_logo__img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="_logo">
+                            <img src="~/assets/images/blogs/brand-logo/br4.webp" alt="logo" class="_logo__img">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="_logo">
+                            <img src="~/assets/images/blogs/brand-logo/br1.webp" alt="logo" class="_logo__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
